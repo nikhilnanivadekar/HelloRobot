@@ -13,6 +13,7 @@ This repository contains up into several directories.
 
  * [drone](src/main/java/org/gids/robot/drone) - Flight controls for the Parrot Drone.
  * [speech](src/main/java/org/gids/robot/speech) - Speech recognition and synthesis.
+    * [en-us model](/src/main/resources/edu.cmu.sphinx.models.en-us/en-us) is provided by default, however [pretrained models](https://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/) for a number of languages are also available.
 
 # Instructions
 
