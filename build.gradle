@@ -35,7 +35,7 @@ repositories {
         url "https://jitpack.io"
     }
     flatDir {
-        dirs "C:/hello-robot-master/libraries/"
+        dirs "libraries"
     }
 }
 
