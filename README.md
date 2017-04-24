@@ -28,3 +28,8 @@ Make sure you include the dependencies while creating the jar.
 8. You can find all the commands supported in command.gram.
 
 This application follows the general Dropwizard Application paradigms.
+
+# Inspiration and Help
+Main sources for AR Parrot Drone controller are:
+1. [Parroteer Project](https://github.com/parrotsonjava/parroteer).
+2. [Autonomous4j](https://github.com/RaspberryPiWithJava/Autonomous4j)
