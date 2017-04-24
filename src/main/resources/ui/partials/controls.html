@@ -1,0 +1,67 @@
+<div>
+    <div class="col-xs-12 col-dashboard-grid controller">
+        <div class="col-xs-12 col-md-4 controller-directions text-center space-bottom">
+            <div class="col-xs-12 text-center">
+                <div class="controller-direction-button controller-top text-center text-white" title="Up"
+                     ng-click="flightController.up()">
+                    <i class="fa fa-2x fa-caret-up icon-center-50"></i>
+                </div>
+            </div>
+            <div class="col-xs-12 text-center">
+                <div class="controller-direction-button controller-left text-center text-white" title="Left"
+                     ng-click="flightController.left()">
+                    <i class="fa fa-2x fa-caret-left icon-center-50"></i>
+                </div>
+                <div class="controller-direction-button controller-circle text-center text-white">
+                    <i class="fa fa-2x fa-circle-thin icon-center-50"></i>
+                </div>
+                <div class="controller-direction-button controller-right text-center text-white" title="Right"
+                     ng-click="flightController.right()">
+                    <i class="fa fa-2x fa-caret-right icon-center-50"></i>
+                </div>
+            </div>
+            <div class="col-xs-12 text-center">
+                <div class="controller-direction-button controller-down text-center text-white" title="Down"
+                     ng-click="flightController.down()">
+                    <i class="fa fa-2x fa-caret-down icon-center-50"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 controller-settings text-center space-bottom">
+            <div class="col-xs-12 text-center space-bottom">
+                <strong>AR-PDO</strong>
+            </div>
+            <div class="controller-button controller-shutdown text-center text-white" title="Shut down"
+                 ng-click="flightController.shutdown()">
+                <i class="fa fa-2x fa-power-off icon-center-50"></i>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 controller-actions text-center space-bottom">
+            <div class="col-xs-12 text-center">
+                <div class="controller-button controller-takeoff text-center text-white" title="Take off"
+                     ng-click="flightController.takeOff()">
+                    <i class="fa fa-paper-plane icon-center"></i>
+                </div>
+            </div>
+            <div class="col-xs-12 text-center">
+                <div class="controller-button controller-reverse text-center text-white" title="Reverse"
+                     ng-click="flightController.reverse()">
+                    <i class="fa fa-step-backward icon-center"></i>
+                </div>
+                <div class="invisible-button">
+                    <i class="fa fa-paper-plane icon-center"></i>
+                </div>
+                <div class="controller-button controller-forward text-center text-white" title="Forward"
+                     ng-click="flightController.forward()">
+                    <i class="fa fa-step-forward icon-center"></i>
+                </div>
+            </div>
+            <div class="col-xs-12 text-center">
+                <div class="controller-button controller-land text-center text-white" title="Land"
+                     ng-click="flightController.land()">
+                    <i class="fa fa-paper-plane fa-rotate-90 icon-center-rotated"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

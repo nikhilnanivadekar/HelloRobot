@@ -1,0 +1,26 @@
+<div>
+    <div class="col-xs-12 col-dashboard-grid space-bottom">
+        <h4 style="display: inline;">Activity Log</h4>
+        <button class="btn btn-xs btn-default pull-right" ng-click="flightController.clearActivityLog()">Clear log</button>
+    </div>
+    <div ng-if="flightController.activityLog.length <= 0">
+        <div class="col-xs-12 col-dashboard-grid">
+            No logs available
+        </div>
+    </div>
+    <div ng-if="flightController.activityLog.length > 0">
+        <div class="col-xs-12 col-dashboard-grid">
+            <div class="col-xs-12 col-dashboard-grid">
+                <strong class="col-xs-4 col-dashboard-grid">Index</strong>
+                <strong class="col-xs-8 col-dashboard-grid">Message</strong>
+            </div>
+        </div>
+        <div class="col-xs-12 col-dashboard-grid" style="height: 200px; overflow-y: auto;">
+            <div class="col-xs-12 col-dashboard-grid" ng-repeat="log in flightController.activityLog | orderBy: '-time'"
+                 style="border-top: black solid 1px;">
+                <div class="col-xs-4 col-dashboard-grid">{{log.time}}</div>
+                <div class="col-xs-8 col-dashboard-grid">{{log.message}}</div>
+            </div>
+        </div>
+    </div>
+</div>

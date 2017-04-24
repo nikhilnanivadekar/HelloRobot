@@ -1,0 +1,115 @@
+.invisible-button-with-text {
+  background-color: white;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 100%;
+  border: solid 5px white
+}
+
+.invisible-button {
+  color: white;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.controller {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid;
+  border-radius: 100px;
+  box-shadow: 0 9px #999;
+}
+
+.controller-button {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: solid 5px rgba(230, 230, 230, 1);
+  box-shadow: 0 9px #999;
+}
+
+.controller-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.controller-shutdown {
+  background-color: red;
+}
+
+.controller-takeoff {
+  background-color: #7D230D;
+}
+
+.controller-land {
+  background-color: #CFCF00;
+}
+
+.controller-reverse {
+  background-color: #00B800;
+}
+
+.controller-forward {
+  background-color: #6699FF;  border-radius: 100%;
+}
+
+.controller-top {
+  margin-bottom: -10px;
+}
+
+.controller-down {
+  margin-top: -10px;
+}
+
+.controller-circle {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.icon-center-direction {
+  position: relative;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.icon-center-50 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-center {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.icon-center-rotated {
+  position: relative;
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+.text-white {
+  color: white;
+}
+
+.controller-direction-button {
+  cursor: pointer;
+  background-color: #333333;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
+  box-shadow: 0 9px #999;
+}
+
+.controller-direction-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

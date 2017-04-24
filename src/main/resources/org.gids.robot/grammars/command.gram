@@ -1,0 +1,15 @@
+#JSGF V1.0;
+
+grammar dialog;
+
+<fly_command> = fly (up | down | left | right | forward | backward);
+
+<take_off> = fly off;
+
+<land> = land;
+
+<stop> = stop;
+
+<terminate> = terminate;
+
+public <command> =  hello | hi | what is your name | i am nick | <fly_command> | <take_off> | <land> | <stop> | <terminate>;
