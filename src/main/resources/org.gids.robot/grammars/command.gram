@@ -10,6 +10,4 @@ grammar dialog;
 
 <stop> = stop;
 
-<terminate> = terminate;
-
-public <command> =  hello | hi | what is your name | i am nick | <fly_command> | <take_off> | <land> | <stop> | <terminate>;
+public <command> =  hello | what is your name | i am nick | terminate | <fly_command> | <take_off> | <land> | <stop> | i am kristen | girls | pineapple;

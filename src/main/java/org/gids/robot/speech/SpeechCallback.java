@@ -8,6 +8,7 @@ public final class SpeechCallback
     public static void speechCallback(String result)
     {
         TTSService ttsService = TTSService.getInstance();
+
         if (result.equals("<unk>"))
         {
             ttsService.say("Sorry I did not follow the command");
@@ -27,8 +28,19 @@ public final class SpeechCallback
         }
         if (result.equalsIgnoreCase("I am Nick"))
         {
-            ttsService.say("Hello Nick! Are you enjoying GIDS?");
-            ttsService.say("Hello Bangalore! How are you doing today?");
+            ttsService.say("Hello Nick!");
+        }
+        if (result.equalsIgnoreCase("I am kristen"))
+        {
+            ttsService.say("Hello Kristen!");
+        }
+        if (result.equalsIgnoreCase("girls"))
+        {
+            ttsService.say("Hello Girls who code!");
+        }
+        if (result.equalsIgnoreCase("pineapple"))
+        {
+            ttsService.say("I love pineapple");
         }
         if (result.contains("fly")
                 || result.contains("land")
@@ -37,7 +49,7 @@ public final class SpeechCallback
             ttsService.say("Nimbus executing");
             ttsService.say(result);
         }
-        if (result.equalsIgnoreCase("terminate"))
+        if (result.contains("terminate"))
         {
             ttsService.say("Hasta la vista, baby");
             ttsService.say("I'll be back");

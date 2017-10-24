@@ -29,6 +29,7 @@ import org.gids.robot.speech.TTSService;
  */
 public class DroneApplication extends Application<ParrotControllerConfiguration>
 {
+    private static final String DRONE_IP = "192.168.1.2";
     private ParrotController parrotController;
 
     public static void main(String[] args) throws Exception
@@ -49,7 +50,7 @@ public class DroneApplication extends Application<ParrotControllerConfiguration>
     @Override
     public void initialize(Bootstrap<ParrotControllerConfiguration> bootstrap)
     {
-        this.parrotController = new ParrotController("192.168.1.3");
+        this.parrotController = new ParrotController(DRONE_IP);
         this.parrotController.connect();
         bootstrap.addBundle(new AssetsBundle("/ui", "/ui", null, "ui"));
     }

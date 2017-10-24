@@ -41,7 +41,8 @@ public class ParrotController
             {
                 //Do Nothing
             });
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             LOGGER.error("Exception creating new drone connection", e);
             return false;
@@ -62,7 +63,8 @@ public class ParrotController
         try
         {
             Thread.sleep(milliseconds);
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             LOGGER.error("", e);
         }
@@ -115,12 +117,16 @@ public class ParrotController
 
     public ParrotController left(int speed)
     {
-        return this.move(-this.percentToFloat(speed), 0f, 0f, 0f);
+    // disable left in case someone calls it by mistake
+//        return this.move(-this.percentToFloat(speed), 0f, 0f, 0f);
+        return this;
     }
 
     public ParrotController right(int speed)
     {
-        return this.left(-speed);
+    // disable right in case someone calls it by mistake
+//        return this.left(-speed);
+        return this;
     }
 
     public ParrotController move(float roll, float pitch, float gaz, float yaw)
@@ -166,11 +172,19 @@ public class ParrotController
     {
         if (result.equalsIgnoreCase("fly up"))
         {
-            this.up(5);
+            this.up(10);
         }
         if (result.equalsIgnoreCase("fly down"))
         {
-            this.down(5);
+            this.down(10);
+        }
+        if (result.equalsIgnoreCase("fly left"))
+        {
+            this.left(2);
+        }
+        if (result.equalsIgnoreCase("fly right"))
+        {
+            this.right(2);
         }
         if (result.equalsIgnoreCase("fly off"))
         {
@@ -216,7 +230,7 @@ public class ParrotController
                 this.left(20);
                 return "Executed Left";
             case "RIGHT":
-                this.right(10);
+                this.right(20);
                 return "Executed Right";
             case "SHUTDOWN":
                 this.shutdown();
