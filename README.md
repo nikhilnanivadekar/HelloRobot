@@ -80,10 +80,11 @@ Simplest way to get the updated dependencies is by searching for `edu.cmu.sphinx
 ### Starting the UI: 
  - Make sure you have internet connectivity
  - Comment the following lines in `org.gids.robot.DroneApplication`
- 
- 	`\\ this.parrotController = new ParrotController(DRONE_IP);`
- 
- 	`\\ this.parrotController.connect();`
+
+ ```java
+ 	// this.parrotController = new ParrotController(DRONE_IP);
+ 	// this.parrotController.connect();
+ ```
  - Run `org.gids.robot.DroneApplication` like a normal Java program
  - If you get an exception _regarding server config not found_ you need to update the run configuration with following parameters:
  	- Program arguments: server \<Enter Absolute path to example.yml>
@@ -100,9 +101,10 @@ Simplest way to get the updated dependencies is by searching for `edu.cmu.sphinx
  - Update the i/p address in `org.gids.robot.DroneApplication`, you should see a static final variable `DRONE_IP`
  - Make sure the following lines are uncommented in `org.gids.robot.DroneApplication`
  
- 	`this.parrotController = new ParrotController(DRONE_IP);`
-     
-    `this.parrotController.connect();`
+ ```java
+    this.parrotController = new ParrotController(DRONE_IP);
+    this.parrotController.connect();
+ ```
  - Run `org.gids.robot.DroneApplication` like a normal Java program
  - Switch to the UI. You can use the console to fly the drone
  - In addition to console you can use keyboard to fly the drone
@@ -114,9 +116,10 @@ Simplest way to get the updated dependencies is by searching for `edu.cmu.sphinx
    Wherever you add it, you need to make sure the tags go in the `public <command>` line.
    For example 
  
- `<new_command> = awesome command`
- 
- `public <command> = EXISTING COMMANDS | <new_command> | <new_inline_command>`
+ ```xml
+    <new_command> = awesome command
+    public <command> = EXISTING COMMANDS | <new_command> | <new_inline_command>
+ ```
  
  - This will enable for the voice recognition to detect the command
  - Add what the system should play/say once new command is detected in `org.gids.robot.speech.SpeechCallback.speechCallback`
